@@ -7,7 +7,9 @@ let people = [
 ];
 
 let simplifier = function(person){
-	return person.name;
+    let age_dt= new Date(Date.now() - person.birthDate);
+    let age = age_dt.getUTCFullYear() - 1970; // 1970 to get the current date
+	return "Hello, my name is " + person.name +" and I am "+ age + " years old";
 };
 
 console.log(people.map(simplifier));

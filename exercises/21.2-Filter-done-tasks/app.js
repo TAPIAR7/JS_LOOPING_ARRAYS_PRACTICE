@@ -10,3 +10,5 @@ let tasks = [
 ];
 
 //your code here
+let pendingTasks = tasks.filter(function(names){return (names['done'] != true)})
+console.log(pendingTasks);
